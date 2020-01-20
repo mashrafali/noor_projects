@@ -8,21 +8,21 @@ Latest update: 26/1/2015
 
 - The open Source Tool that is going to be used for this module is "ClamAV".
 
-- ClamAV® is an open source (GPL) anti-virus engine used in a variety of situations including email scanning, web scanning, and end point security. 
+- ClamAV is an open source (GPL) anti-virus engine used in a variety of situations including email scanning, web scanning, and end point security. 
 
 - It provides a number of utilities including a flexible and scalable multi-threaded daemon, a command line scanner and an advanced tool for automatic database updates.
 
 
-= Mission: Auto Search & Destroy =
+= Mission: Auto Search & Destroy
 
 - For most cases, AV Scan requests are done manually or on demand, however in our system we need this task to be active and automatically.
 
 - The purpose of this module is to Automatically scan certain directories and Purges Infections, without waiting on any user input.
 
 
-= Installation =
+= Installation 
 
-'''''- First install the ClamAV package and update it using freshclam, Or you can use the pre-written script for this task:'''''
+- First install the ClamAV package and update it using freshclam, Or you can use the pre-written script for this task:
 
 {{{
  /bin/bash    <-- Your Parser
@@ -48,21 +48,20 @@ echo "Registering services..."
 echo "[OK]"
 echo
 echo
-
 }}}
 
-'''''- you can use the service by entering the following command: '''''
+- you can use the service by entering the following command:
 
 {{{
 clamdscan /DIR-TO-SCAN/ --fdpass --log=/DIR-TO-LOG/clamav-scan.log --infected --multiscan
 }}}
 
 
-= Automation =
+= Automation 
 
 - To activate the automation feature, we have create below script to be used in the system
 
-'''SEARCH-AND-DESTORY.SH'''
+SEARCH-AND-DESTORY.SH
 {{{
  /bin/bash <--Parser
 
@@ -93,7 +92,8 @@ echo
 
 - And then this script can be added to crontab for a minute by minute scan :
 
-'''#crontab -e'''
+# crontab -e
+
 {{{
 * * * * * /root/Anti-Virus/SEARCH-AND-DESTORY.SH
 }}}
