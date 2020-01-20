@@ -1,19 +1,10 @@
-{{{
 Author       : Mohamed Ashraf
 Title        : Active Anti-Virus module
 Version      : 1.0
 Creation date: 26/1/2015
 Latest update: 26/1/2015
-}}}
 
-<<TableOfContents(4)>>
-
-
-{{attachment:logo.png}}
-
-
-
-= Introduction =
+= Introduction
 
 - The open Source Tool that is going to be used for this module is "ClamAV".
 
